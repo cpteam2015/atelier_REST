@@ -1,0 +1,39 @@
+{
+    "titre": "atelier 1",
+    "theme": "Theme de l'atelier",
+    "type": "type 222",
+    "date": {
+        "remarques": null,
+        "date": [
+            {
+                "lundi_am": true
+            },
+            {
+                "vendredi_pm": false
+            }
+        ]
+    },
+    "labo": "CNRS",
+    "lieu": "D202, aveneue de ... 33400 lll",
+    "duree": 30,
+    "capacite": 15,
+    "libre": false,
+    "resume": " Lorem  Fusce leo nibh, interdum et nisi volutpat, condimentum consectetur justo. Nam eleifend diam quis justo eleifend rhoncus. Etiam elit sem",
+    "animateurs": [
+        "xblanc",
+        "mfoucault"
+    ],
+    "partenaires": [
+        "orange",
+        "cgi"
+    ],
+    "public": [
+        {
+            "niveau1": true
+        }
+    ],
+    "discipline": [
+        "chimie",
+        "physique"
+    ]
+}
