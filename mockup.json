@@ -1,5 +1,6 @@
 [
     {
+	"_id":{"$oid":"5606ad73e4b01b4fd5928da3"},
 	"titre": "atelier 1",
 	"theme": "Theme de l'atelier",
 	"type": "type 222",

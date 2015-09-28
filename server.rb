@@ -1,18 +1,30 @@
 require 'sinatra'
 require 'json'
 require_relative 'model'
+require_relative 'db/atelier_connector'
 
-get '/atelier' do 
-	halt 200, getAtelierColl.to_json	
+include AtelierModel
+
+get '/' do
+  erb :atelier
+end
+
+get '/atelier' do
+  halt 200, getAtelier.to_json	
 end
 
 get '/atelier/:id' do
-	halt 200, getAtelier.to_json
+  halt 200, getAtelier(params[:id]).to_json
 end
 
-get '/atelier.html' do
-	send_file 'app/atelier.html'
+put '/atelier/:id' do
+  replaceAtelier request.body
 end
-get '/controllerAtelier.js' do
-	send_file 'app/controllerAtelier.js'
+
+post '/atelier' do
+  insertAtelier request.body
+end
+
+delete '/atelier/:id' do
+  deleteAtelier params[:id]
 end
