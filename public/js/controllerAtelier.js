@@ -7,6 +7,7 @@ x.onreadystatechange = function () {
 x.send();
 
 function fillForm (json) {
+<<<<<<< HEAD:app/controllerAtelier.js
 	json = json[0];
 	console.log (json['title']);
 	for (key in json)
@@ -24,4 +25,8 @@ function fillForm (json) {
 				document.getElementById(key).value = json[key]
 			}
 		}
+=======
+	console.log (json);
+	document.getElementById('title_span').innerHtml = json.titre;
+>>>>>>> 9031a1cc549533e15e44923b67ca1a2315a0b18a:public/js/controllerAtelier.js
 }
