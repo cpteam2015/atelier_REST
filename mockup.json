@@ -1,41 +1,36 @@
 [
     {
-	"titre": "atelier 1",
+	"title": "atelier 1",
 	"theme": "Theme de l'atelier",
 	"type": "type 222",
-	"date": {
-            "remarques": null,
-            "date": [
+	"date": 
 		{
-                    "lundi_am": true
+                    "lundi_am": true,
+                    "vendredi_pm": false,
+                    "mardi_pm":true
 		},
-		{
-                    "vendredi_pm": false
-		}
-            ]
-	},
-	"labo": "CNRS",
-	"lieu": "D202, aveneue de ... 33400 lll",
+	"lab": "CNRS",
+	// "lieu": "D202, aveneue de ... 33400 lll",
 	"duree": 30,
-	"capacite": 15,
-	"libre": false,
-	"resume": " Lorem  Fusce leo nibh, interdum et nisi volutpat, condimentum consectetur justo. Nam eleifend diam quis justo eleifend rhoncus. Etiam elit sem",
-	"animateurs": [
+	"capacity": 15,
+	"free": true,
+	"sum": " Lorem  Fusce leo nibh, interdum et nisi volutpat, condimentum consectetur justo. Nam eleifend diam quis justo eleifend rhoncus. Etiam elit sem",
+	"anim": [
             "xblanc",
             "mfoucault"
 	],
-	"partenaires": [
+	"partner": [
             "orange",
             "cgi"
-	],
-	"public": [
-            {
-		"niveau1": true
-            }
-	],
-	"discipline": [
-            "chimie",
-            "physique"
 	]
+	// "public": [
+ //            {
+	// 	"niveau1": true
+ //            }
+	// ],
+	// "discipline": [
+ //            "chimie",
+ //            "physique"
+	// ]
     }
 ]
