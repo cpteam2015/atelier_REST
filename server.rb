@@ -18,13 +18,16 @@ get '/atelier/:id' do
 end
 
 put '/atelier/:id' do
-  replaceAtelier request.body
+  replaceAtelier request.body.read
+  halt 200
 end
 
 post '/atelier' do
-  insertAtelier request.body
+  insertAtelier request.body.read
+  halt 200
 end
 
 delete '/atelier/:id' do
   deleteAtelier params[:id]
+  halt 200
 end
