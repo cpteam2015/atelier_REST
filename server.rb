@@ -27,6 +27,10 @@ post '/atelier' do
   halt 200
 end
 
+get '/mockup.json' do
+	send_file 'mockup.json'
+end
+
 delete '/atelier/:id' do
   deleteAtelier params[:id]
   halt 200
