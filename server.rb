@@ -7,6 +7,7 @@ include AtelierModel
 
 get '/' do
   erb :atelier
+  erb :listeAtelier
 end
 
 get '/atelier' do
