@@ -6,8 +6,11 @@ require_relative 'db/atelier_connector'
 include AtelierModel
 
 get '/' do
-  erb :atelier
   erb :listeAtelier
+end
+
+get '/atelier' do
+  erb :atelier
 end
 
 get '/atelier' do

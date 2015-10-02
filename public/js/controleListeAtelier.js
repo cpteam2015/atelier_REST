@@ -20,7 +20,7 @@ function chargement (json) {
 	for(i=0;i< longJson; i++)
 	{
 		var ligne = document.createElement('tr');
-		ligne.innerHTML = '<td><input type="text" id ="idTitre_'+ i +'" name="Nom_Atelier" disabled=True style="width:97%;"><td><input type="text" id ="idTheme_'+ i +'" name="Theme" disabled=True style="width:97%;"></td><td><input type="button" id="visual_'+i+'" onclick=window.open("atelier.erb") value="visualiser" style="margin:0 10px;" /><input type="button" id="sup_'+i+'" onclick="supprimer('+i+');" value="supprimer" /></td></tr>'
+		ligne.innerHTML = '<td><input type="text" id ="idTitre_'+ i +'" name="Nom_Atelier" disabled=True style="width:97%;"><td><input type="text" id ="idTheme_'+ i +'" name="Theme" disabled=True style="width:97%;"></td><td><input type="button" id="visual_'+i+'" onclick=window.open("atelier") value="visualiser" style="margin:0 10px;" /><input type="button" id="sup_'+i+'" onclick="supprimer('+i+');" value="supprimer" /></td></tr>'
 		document.getElementById('listAt').appendChild(ligne);
 		tabTitre[j] = Json[i].title;
 		tabTheme[j] = Json[i].theme;
