@@ -2,7 +2,7 @@ var data = new XMLHttpRequest();
 data.open('GET','mockup.json',true);
 data.onreadystatechange = function () {
           if(x.readyState==4 && x.status == "200")
-			chargement(JSON.parse(x.responseText)));
+			chargement(JSON.parse(x.responseText));
 		  else
 			dump("erreur pendant le chargement de la page.\n");
         }
