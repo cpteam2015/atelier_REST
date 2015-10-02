@@ -3,8 +3,6 @@ data.open('GET','mockup.json',true);
 data.onreadystatechange = function () {
           if(data.readyState==4 && data.status == "200")
 			chargement(JSON.parse(data.responseText));
-		  else
-			dump("erreur pendant le chargement de la page.\n");
         }
         
 data.send();
