@@ -26,4 +26,32 @@
 	]
 	
     }
+    
+    {
+	"title": "atelier 2",
+
+	"theme": "Science de la technologie",
+	"type": "documents",
+	"date": 
+		{
+                    "lundi_am": true,
+                    "vendredi_pm": false,
+                    "mardi_pm":true
+		},
+	"lab": "CNRS",
+	
+	"duree": 30,
+	"capacity": 15,
+	"free": true,
+	"sum": " enseignement de la science de la technologie",
+	"anim": [
+            "xblanc",
+            "mfoucault"
+	],
+	"partner": [
+            "orange",
+            "cgi"
+	]
+	
+    }
 ]
