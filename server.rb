@@ -2,11 +2,14 @@ require 'sinatra'
 require 'json'
 require_relative 'model'
 require_relative 'db/atelier_connector'
+require 'pp'
 
 include AtelierModel
 
-get '/' do
-  erb :atelier
+get '/:id' do
+	erb :atelier
+	#pp 'get /'
+  #halt 200, getAtelierMock.to_json
 end
 
 get '/atelier' do

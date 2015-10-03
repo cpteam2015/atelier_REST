@@ -16,6 +16,7 @@ module AtelierModel
 
   def getAtelier id=nil
     connector = AtelierConnector.new
+    pp connector
     if id.nil?
       connector.findAll
     else
