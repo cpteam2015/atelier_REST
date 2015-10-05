@@ -7,7 +7,7 @@ require 'pp'
 include AtelierModel
 
 
-get '/atelier.html/:id' do
+get '/atelier.html/:id' do #vis & modif
 	erb :atelier
 	#pp 'get /'
   #halt 200, getAtelierMock.to_json
@@ -16,12 +16,13 @@ get '/' do
   erb :listeAtelier
 end
 
-<<<<<<< HEAD
-=======
-get '/atelier.html' do
+get '/atelier.html' do # creation 
   erb :atelier
 end
->>>>>>> 11ded3f01544db8e419b5322c7b2b6dbb21e8c97
+
+get '*/controllerAtelier.js' do
+  send_file 'public/js/controllerAtelier.js'
+end
 
 get '/atelier' do
   halt 200, getAtelier.to_json	
@@ -48,4 +49,9 @@ end
 delete '/atelier/:id' do
   deleteAtelier params[:id]
   halt 200
+end
+get '/delete/:id' do |id|
+  pp "delete #{id}"
+  deleteAtelier id
+  redirect to ('/')
 end

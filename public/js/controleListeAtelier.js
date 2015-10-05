@@ -12,22 +12,12 @@ function chargement (json) {
 	console.log(json);
 	for(i=0;i< json.length; i++){
 		var ligne = document.createElement('tr');
-		ligne.innerHTML = '<td><input type="text" disabled=True style="width:97%;" value="'+json[i].titre+'"><td>'
-								// <input type="text" disabled=True style="width:97%;" value="'+json[i].theme+'"></td>
-								// <td><input type="button" onclick=window.open("atelier/'+json[i]._id+'") value="visualiser" style="margin:0 10px;" />
-								// <input type="button" onclick="supprimer('+json[i]._id+');" value="supprimer" /></td></tr>'
+		ligne.innerHTML = '<td><input type="text"  disabled=True style="width:97%;" value="'+json[i].titre+'"></td>'
+		ligne.innerHTML+= '<td><input type="text" disabled=True style="width:97%;" value="'+json[i].theme+'"></td>'
+		ligne.innerHTML+= '<td><input type="button"  onclick=window.open("atelier.html/'+json[i]._id+'") value="visualiser" style="margin:0 10px;" />'
+		ligne.innerHTML+=  '<a href="/delete/'+json[i]._id+'">Delete</a></td></tr>'
 		document.getElementById('listAt').appendChild(ligne);
 	}
 }
 
-function supprimer(b)
-{
-	var nomAt = Json[b].title;
-	var conf= confirm('Voulez-vous vraiment supprimer l\'atelier: '+ nomAt +' ?');
-	if(conf)
-	{
-		var i = document.getElementById('sup_'+b+'').parentNode.parentNode.rowIndex;
-		document.getElementById('listAt').deleteRow(i);		
-	}
-}
 
