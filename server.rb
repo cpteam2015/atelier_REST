@@ -7,7 +7,7 @@ require 'pp'
 include AtelierModel
 
 
-get '/' do
+get '/atelier.html/:id' do
 	erb :atelier
 	#pp 'get /'
   #halt 200, getAtelierMock.to_json
@@ -16,9 +16,6 @@ get '/' do
   erb :listeAtelier
 end
 
-get '/atelier' do
-  erb :atelier
-end
 
 get '/atelier' do
   halt 200, getAtelier.to_json	
