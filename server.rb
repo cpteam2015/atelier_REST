@@ -16,6 +16,12 @@ get '/' do
   erb :listeAtelier
 end
 
+<<<<<<< HEAD
+=======
+get '/atelier.html' do
+  erb :atelier
+end
+>>>>>>> 11ded3f01544db8e419b5322c7b2b6dbb21e8c97
 
 get '/atelier' do
   halt 200, getAtelier.to_json	
