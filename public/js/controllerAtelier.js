@@ -1,8 +1,12 @@
 var x = new XMLHttpRequest();
+<<<<<<< HEAD
 console.log('send req');
 url = document.URL;
 console.log(url);
 x.open('GET','http://localhost:4567/atelier',true);
+=======
+x.open('GET','mockup.json',true);
+>>>>>>> 08a34e24be7653985b517b99f165ae46a436551e
 x.onreadystatechange = function () {
           if(x.readyState==4 && x.status == "200")
 			fillForm(JSON.parse(x.responseText));

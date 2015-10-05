@@ -6,10 +6,18 @@ require 'pp'
 
 include AtelierModel
 
-get '/:id' do
+
+get '/' do
 	erb :atelier
 	#pp 'get /'
   #halt 200, getAtelierMock.to_json
+end
+get '/' do
+  erb :listeAtelier
+end
+
+get '/atelier' do
+  erb :atelier
 end
 
 get '/atelier' do
@@ -21,13 +29,20 @@ get '/atelier/:id' do
 end
 
 put '/atelier/:id' do
-  replaceAtelier request.body
+  replaceAtelier request.body.read
+  halt 200
 end
 
 post '/atelier' do
-  insertAtelier request.body
+  insertAtelier request.body.read
+  halt 200
+end
+
+get '/mockup.json' do
+	send_file 'mockup.json'
 end
 
 delete '/atelier/:id' do
   deleteAtelier params[:id]
+  halt 200
 end

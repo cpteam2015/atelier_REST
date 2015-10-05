@@ -1,3 +1,4 @@
+require 'pp'
 module AtelierModel
 
   def getAtelierCollMock
@@ -32,7 +33,7 @@ module AtelierModel
 
   def insertAtelier a
     connector = AtelierConnector.new
-    hash = JSON.parse a 
+    hash = JSON.parse a
     connector.insert hash
   end
 

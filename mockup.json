@@ -1,8 +1,7 @@
 [
     {
 	"title": "atelier 1",
-	"_id":{"$oid":"5606ad73e4b01b4fd5928da3"},
-	"titre": "atelier 1",
+
 	"theme": "Theme de l'atelier",
 	"type": "type 222",
 	"date": 
@@ -12,7 +11,7 @@
                     "mardi_pm":true
 		},
 	"lab": "CNRS",
-	// "lieu": "D202, aveneue de ... 33400 lll",
+	
 	"duree": 30,
 	"capacity": 15,
 	"free": true,
@@ -25,14 +24,33 @@
             "orange",
             "cgi"
 	]
-	// "public": [
- //            {
-	// 	"niveau1": true
- //            }
-	// ],
-	// "discipline": [
- //            "chimie",
- //            "physique"
-	// ]
+	
+    },
+    
+    {
+	"title": "atelier 2",
+	"theme": "Science de la technologie",
+	"type": "documents",
+	"date": 
+		{
+                    "lundi_am": true,
+                    "vendredi_pm": false,
+                    "mardi_pm":true
+		},
+	"lab": "CNRS",
+	
+	"duree": 30,
+	"capacity": 15,
+	"free": true,
+	"sum": " enseignement de la science de la technologie",
+	"anim": [
+            "xblanc",
+            "mfoucault"
+	],
+	"partner": [
+            "orange",
+            "cgi"
+	]
+	
     }
 ]

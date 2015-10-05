@@ -30,7 +30,7 @@ class Connector
   end
 
   def delete id
-    @collection.delete_one _id: BSON::ObjectId.from_string(id)
+    @collection.find(_id: BSON::ObjectId.from_string(id)).delete_one 
   end
 
   def insert doc
@@ -38,9 +38,9 @@ class Connector
   end
 
   def replace doc
-    found = find doc[:_id]
-    doc[:_id] = BSON::ObjectId.from_string doc[:_id]
-    @collection.replace_one found, doc
+    id = BSON::ObjectId.from_string doc["_id"]
+    doc['_id'] = id
+    @collection.find(_id: id).replace_one doc
   end
 
 end
