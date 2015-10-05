@@ -9,7 +9,7 @@ get '/' do
   erb :listeAtelier
 end
 
-get '/atelier' do
+get '/atelier.html' do
   erb :atelier
 end
 

@@ -1,5 +1,5 @@
 var x = new XMLHttpRequest();
-x.open('GET','mockup.json',true);
+x.open('GET','/atelier',true);
 x.onreadystatechange = function () {
           if(x.readyState==4 && x.status == "200")
 			fillForm(JSON.parse(x.responseText));
@@ -7,6 +7,7 @@ x.onreadystatechange = function () {
 x.send();
 
 function fillForm (json) {
+	console.log(json)
 	json = json[0];
 	console.log (json['title']);
 	for (key in json)
